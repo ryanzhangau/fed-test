@@ -1,15 +1,19 @@
+@import '_vars';
+
 .FedTest-card {
   border: 1px solid #ccc;
   padding: 20px 30px;
   display: grid;
   grid-template-rows: auto 1fr 60px;
   position: relative;
+  @media #{$small-only} {
+    margin-top: 20px;
+  }
   &:hover {
     background-color: #f2f2f2;
   }
   h3 {
     font-size: 25px;
-    
   }
   .FedTest-arrow {
     width: 20px;
@@ -22,10 +26,11 @@
       fill: #00a7b1;
     }
   }
-
-  &:nth-child(2n + 4) {
-    .FedTest-arrow {
-      transform: rotate(90deg);
+  @media #{$large-up} {
+    &:nth-child(2n + 4) {
+      .FedTest-arrow {
+        transform: rotate(90deg);
+      }
     }
   }
 }
