@@ -1,0 +1,47 @@
+.FedTest-card {
+  border: 1px solid #ccc;
+  padding: 20px 30px;
+  display: grid;
+  grid-template-rows: auto 1fr 60px;
+  position: relative;
+  &:hover {
+    background-color: #f2f2f2;
+  }
+  h3 {
+    font-size: 25px;
+    
+  }
+  .FedTest-arrow {
+    width: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 20px;
+    svg {
+      fill: #00a7b1;
+    }
+  }
+
+  &:nth-child(2n + 4) {
+    .FedTest-arrow {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.FedTest-card--featured {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  background-image: linear-gradient(to bottom right, #00a4c8, #00ad87);
+  color: white;
+  &:hover {
+    background-image: linear-gradient(to bottom right, #00ad87, #00a4c8);
+  }
+  .FedTest-arrow {
+    background-color: rgba(0, 0, 0, 0.6);
+    svg {
+      fill: white;
+    }
+  }
+}
