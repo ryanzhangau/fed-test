@@ -1,0 +1,15 @@
+.FedTest-filesize {
+  display: flex;
+  grid-row: 3;
+  grid-column: 1;
+  align-self: flex-end;
+  font-size: 14px;
+  color: #777;
+  .FedTest-fileicon {
+    margin: 0 10px 0;
+    width: 20px;
+    svg {
+      fill: #777;
+    }
+  }
+}
