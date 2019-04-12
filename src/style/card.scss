@@ -1,7 +1,7 @@
 @import '_vars';
 
 .FedTest-card {
-  border: 1px solid #ccc;
+  border: 1px solid $grey;
   padding: 20px 30px;
   display: grid;
   grid-template-rows: auto 1fr 60px;
@@ -10,7 +10,7 @@
     margin-top: 20px;
   }
   &:hover {
-    background-color: #f2f2f2;
+    background-color: $lightGrey;
   }
   h3 {
     font-size: 25px;
@@ -23,7 +23,7 @@
     margin: 0;
     padding: 20px;
     svg {
-      fill: #00a7b1;
+      fill: $primary;
     }
   }
   @media #{$large-up} {
@@ -38,15 +38,15 @@
 .FedTest-card--featured {
   grid-row: 1;
   grid-column: 1 / span 2;
-  background-image: linear-gradient(to bottom right, #00a4c8, #00ad87);
-  color: white;
+  background-image: linear-gradient(to bottom right, $primary, $secondary);
+  color: $white;
   &:hover {
-    background-image: linear-gradient(to bottom right, #00ad87, #00a4c8);
+    background-image: linear-gradient(to bottom right, $secondary, $primary);
   }
   .FedTest-arrow {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: $black60;
     svg {
-      fill: white;
+      fill: $white;
     }
   }
 }
