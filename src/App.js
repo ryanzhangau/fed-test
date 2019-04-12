@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
+import Card from './component/Card';
+import './style/app.scss';
 
 class App extends Component {
+  state = {
+    cards: []
+  };
+
+  componentDidMount() {
+    fetch('http://prototype.carter-dev.net/fed-test/items.json')
+      .then(res => res.json())
+      .then(data => this.setState({ cards: data.items }));
+  }
+
+  list = () => {
+    return this.state.cards.map((card, index) => <Card card={card} key={index} />);
+  };
+
   render() {
-    return (
-      <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'>
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    return <div className='FedTest-app'>{this.list()}</div>;
   }
 }
 
