@@ -4,7 +4,7 @@ import './style/app.scss';
 
 class App extends Component {
   state = {
-    cards: []
+    cards: ['test']
   };
 
   componentDidMount() {
